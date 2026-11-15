@@ -1,13 +1,142 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mon premier site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez nos services et notre entreprise.">
+    <title>NOVA — Business Agency</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bienvenue sur mon site !</h1>
-    <p>Ceci est mon premier site Internet.</p>
-    <button onclick="alert('Salut !')">Clique ici</button>
+
+    <header class="navbar">
+        <a href="#" class="logo">NOVA<span>.</span></a>
+
+        <nav id="nav">
+            <a href="#home">Accueil</a>
+            <a href="#services">Services</a>
+            <a href="#about">À propos</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="nav-button">Nous contacter</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="tag">
+                    <span class="dot"></span>
+                    BIENVENUE CHEZ NOVA
+                </div>
+
+                <h1>
+                    Donnez vie à<br>
+                    vos <span>ambitions.</span>
+                </h1>
+
+                <p>
+                    Nous accompagnons les entreprises dans leurs projets
+                    grâce à des solutions modernes, efficaces et adaptées.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#services" class="primary-button">Nos services ↗</a>
+                    <a href="#about" class="secondary-button">Découvrir</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="visual-top">
+                        <span>VOTRE FUTUR</span>
+                        <span>01 / 03</span>
+                    </div>
+                    <div class="visual-circle"></div>
+                    <h2>Think.<br>Build.<br><span>Grow.</span></h2>
+                    <div class="visual-bottom">
+                        <span>INNOVATION & PERFORMANCE</span>
+                        <span>✳</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services section" id="services">
+            <div class="section-heading">
+                <span class="eyebrow">CE QUE NOUS FAISONS</span>
+                <h2>Nos <span>services.</span></h2>
+                <p>Des solutions pensées pour faire avancer vos projets.</p>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <div class="service-icon">✳</div>
+                    <h3>Stratégie</h3>
+                    <p>Nous vous aidons à construire une stratégie adaptée à vos objectifs.</p>
+                    <span class="card-number">01 / 03</span>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">⌘</div>
+                    <h3>Création</h3>
+                    <p>Nous imaginons des solutions créatives pour développer votre activité.</p>
+                    <span class="card-number">02 / 03</span>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">↗</div>
+                    <h3>Développement</h3>
+                    <p>Nous vous accompagnons pour faire grandir votre entreprise.</p>
+                    <span class="card-number">03 / 03</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="about-label">À PROPOS DE NOUS</div>
+            <div>
+                <h2>Votre vision.<br>Notre <span>mission.</span></h2>
+                <p>
+                    NOVA est une entreprise fictive qui place
+                    l'innovation, la créativité et la qualité au centre
+                    de ses projets.
+                </p>
+                <a href="#contact" class="text-link">Parlons de votre projet ↗</a>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="section-heading">
+                <span class="eyebrow">CONTACT</span>
+                <h2>Parlons de votre <span>projet.</span></h2>
+                <p>Une idée ? Une question ? Contactez-nous.</p>
+            </div>
+
+            <form id="contactForm">
+                <label for="name">Votre nom</label>
+                <input type="text" id="name" placeholder="Votre nom" required>
+
+                <label for="email">Votre adresse e-mail</label>
+                <input type="email" id="email" placeholder="exemple@email.com" required>
+
+                <label for="message">Votre message</label>
+                <textarea id="message" rows="5" placeholder="Parlez-nous de votre projet..." required></textarea>
+
+                <button type="submit" class="primary-button">Envoyer le message ↗</button>
+                <p id="formMessage" class="form-message"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="logo">NOVA<span>.</span></a>
+        <p>© 2026 NOVA. Site de démonstration.</p>
+        <a href="#home">Retour en haut ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
